@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>About</title>
+    <title>Help</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <h1>{{title}}</h1>
-    <p>Author name: {{name}}</p>
-    <img src="img/arpit-bhai.jpg">
+    {{>header}}
+    <p>{{message}}</p>
+    {{>footer}}
 </body>
 
 </html>
