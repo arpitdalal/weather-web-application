@@ -46,6 +46,22 @@ app.get('/weather', (req, res) => {
     })
 })
 
+app.get('/help/*', (req, res) => {
+    res.render('404', {
+        title: '404 :(',
+        name: 'JSN',
+        errMessage: 'Sorry couldn\'t find the help document you are looking for :('
+    })
+})
+
+app.get('*', (req, res) => {
+    res.render('404', {
+        title: '404 :(',
+        name: 'JSN',
+        errMessage: 'Sorry couldn\'t find the page you requested :('
+    })
+})
+
 app.listen(3000, () => {
     console.log('Server initialized on port 3000 :)')
 })
