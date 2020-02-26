@@ -29,8 +29,32 @@ header a{
     text-decoration: none;
 }
 
+input{
+    border: 1px solid #cccccc;
+    padding: 8px;
+    border-radius: 25px;
+    outline: none;
+}
+
+button{
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+    border-radius: 25px;
+}
+
 .portrait{
     width: 250px;
+}
+
+.errorMsg{
+    color: red;
+}
+
+.green{
+    color: green;
 }
 
 footer{
