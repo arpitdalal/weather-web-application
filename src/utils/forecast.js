@@ -9,9 +9,12 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback(body.error)
         } else {
-            callback(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature
-                + ' degrees out. There is ' + body.currently.precipProbability
-                + '% chance of rain.')
+            callback(undefined, '<span class="green">' + body.daily.data[0].summary
+                + '<br>There is ' + body.currently.precipProbability + '% chance of rain.</span>'
+                + '<br>Current temperature: <span class="green">' + body.currently.temperature + '° C</span>'
+                + '<br>Temprature high: <span class="green">' + body.daily.data[0].temperatureHigh + '° C</span>'
+                + '<br>Temperature low: <span class="green">' + body.daily.data[0].temperatureLow + '° C</span>'
+                + '<br>Wind speed: <span class="green">' + body.daily.data[0].windSpeed + ' meters/sec</span>')
         }
     })
 }

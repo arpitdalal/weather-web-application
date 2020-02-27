@@ -11,8 +11,8 @@ weatherForm.addEventListener('submit', (e) => {
             if (data.error) {
                 return msgDiv.innerHTML = '<p class="errorMsg">' + data.error + '</p>'
             }
-            return msgDiv.innerHTML = '<p>In <span class="green">' + data.location + 
-                ',</span><br>It is <span class="green">' + data.forecast + '</span></p>'
+            return msgDiv.innerHTML = '<p>In <span class="green">' + data.location +
+                ',</span><br>' + data.forecast + '</p>'
         }))
     })
 })
